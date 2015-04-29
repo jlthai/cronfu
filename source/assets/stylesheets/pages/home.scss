@@ -1,0 +1,51 @@
+.index {
+  .animated {
+    -moz-animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    -moz-animation-delay: .25s;
+    -webkit-animation-delay: .25s;
+  }
+
+  main > section { padding-top: em(22.92); }
+
+  .container { @include outer-container; }
+
+  .me {
+    @include span-columns(6);
+    @include shift(3);
+    text-align: center;
+
+    h1 {
+      font-size: em(60);
+      margin: em(14.16) 0 em(8.75) 0;
+      color: $secondary-color;
+    }
+
+    .social {
+      margin-top: em(37.08);
+
+      ul { margin-top: em(22.92); }
+
+      li {
+        display: inline;
+        margin-right: em(37.08);
+      }
+
+      a { color: $tertiary-color; }
+      a:hover { color: $secondary-color; }
+      i { font-size: em(37.08); }
+    }
+  }
+
+
+  .about {
+    @include span-columns(6);
+    height: em(254);
+
+    p {
+      padding: 0 em(37.08);
+      margin-top: em(60);
+      text-align: center;
+    }
+  }
+}

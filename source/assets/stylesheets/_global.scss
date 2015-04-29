@@ -1,0 +1,36 @@
+header {
+  line-height: normal;
+
+  p.logo {
+    color: $primary-color;
+    display: inline-block;
+    margin: 0;
+    font-size: em(37.08);
+
+    span {
+      font-size: em(8.75);
+      color: $tertiary-color;
+    }
+  }
+
+  nav {
+    @include outer-container;
+    padding: em(22.92) 0 em(8.75) 0;
+  }
+
+  nav ul {
+    float: right;
+    margin-top: em(18);
+  }
+
+  nav li {
+    display: inline-block;
+    margin-right: em(37.08);
+  }
+}
+
+footer {
+  @include outer-container;
+  text-align: center;
+  margin-top: em(37.08);
+}
