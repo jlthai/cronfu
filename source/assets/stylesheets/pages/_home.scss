@@ -31,6 +31,8 @@
         margin-right: em(37.08);
       }
 
+      li:last-child { margin-right: 0; }
+
       a { color: $tertiary-color; }
       a:hover { color: $secondary-color; }
       i { font-size: em(37.08); }
