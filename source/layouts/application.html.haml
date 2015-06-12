@@ -6,6 +6,8 @@
     %meta{ name: "viewport", content: "width=device-width, initial-scale=1" }
     %title= current_page.data.title || "Cronfu"
     = stylesheet_link_tag "application"
+    = favicon_tag 'assets/images/fav.png'
+    = partial "partials/ga.html" if build?
 
   %body{ class: page_classes }
     %header
