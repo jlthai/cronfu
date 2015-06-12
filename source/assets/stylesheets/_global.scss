@@ -15,7 +15,8 @@ header {
 
   nav {
     @include outer-container;
-    padding: em(22.92) 0 em(8.75) 0;
+    padding: em(22.92) em(22.92) em(8.75) em(22.92);
+    text-align: center;
   }
 
   nav ul {
@@ -26,6 +27,14 @@ header {
   nav li {
     display: inline-block;
     margin-right: em(37.08);
+  }
+}
+
+@include media($large-screen-up) {
+  header {
+    nav {
+      text-align: left;
+    }
   }
 }
 

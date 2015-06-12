@@ -11,8 +11,8 @@
   .container { @include outer-container; }
 
   .me {
-    @include span-columns(6);
-    @include shift(3);
+    @include span-columns(10);
+    @include shift(1);
     text-align: center;
 
     h1 {
@@ -24,18 +24,40 @@
     .social {
       margin-top: em(37.08);
 
-      ul { margin-top: em(22.92); }
+      .group {
+        margin-top: em(37.08);
 
-      li {
-        display: inline;
-        margin-right: em(37.08);
+        a {
+          color: $tertiary-color;
+          margin-right: em(22.92);
+        }
+
+        a:last-child {
+          margin-right: 0;
+        }
       }
 
-      li:last-child { margin-right: 0; }
-
-      a { color: $tertiary-color; }
       a:hover { color: $secondary-color; }
       i { font-size: em(37.08); }
+    }
+
+  }
+
+  @include media($large-screen-up) {
+    .me {
+      @include span-columns(6);
+      @include shift(3);
+    }
+
+    .social {
+      .group {
+        display: inline-block;
+        margin-right: em(22.92);
+      }
+
+      .group:last-child {
+        margin-right: 0;
+      }
     }
   }
 
